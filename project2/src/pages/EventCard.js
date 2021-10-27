@@ -1,9 +1,9 @@
 
-const EventCard = ({ id, type, venue }) => {
+const EventCard = ({ id, type, venue, performers }) => {
     return (
       <div className='event'>
         <h2>
-          {id} ({type})
+          {performers.type} ({type})
         </h2>
         <p> {venue.name} {venue.extended_address}</p>
         {/* <picture>
