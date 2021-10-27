@@ -5,7 +5,7 @@ const EventCard = ({ id, type, venue }) => {
         <h2>
           {id} ({type})
         </h2>
-        <p>{venue}</p>
+        <p> {venue.name} {venue.extended_address}</p>
         {/* <picture>
           <img src={image} alt={name} />
         </picture> */}
