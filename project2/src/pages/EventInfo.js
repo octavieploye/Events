@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
+import EventList from './EventList'
 
 const EventInfo = ({
   id,
-  type,
   datetime_utc,
   url,
   title,
@@ -15,26 +15,27 @@ const EventInfo = ({
   let fullDate = `${time} ${date}`
 
   return (
-    <div className="event">
-      <h2>
-        <Link to={`/events/${id}`}>
+    <>
+      <div>
+        <Link to="/events">Click here to see all events</Link>
+      </div>
+      <div className="event">
+        <h2>{performers[0].name}</h2>
+        <p>
           {' '}
-          {performers.name} {title}
-        </Link>
-      </h2>
-      <p> {type} </p>
-      <p>
-        {' '}
-        {venue.name} {venue.extended_address}
-      </p>
+          {venue.name} {venue.extended_address}
+        </p>
 
-      <p> {fullDate} </p>
+        <p> {fullDate} </p>
 
-      <p> {venue.url} </p>
-      <picture>
-        <img src={performers[0].image} alt={performers.name} />
-      </picture>
-    </div>
+        <p>
+          <Link to={venue.url}>Click here for tickets</Link>
+        </p>
+        <picture>
+          <img src={performers[0].image} alt={performers.name} />
+        </picture>
+      </div>
+    </>
   )
 }
 

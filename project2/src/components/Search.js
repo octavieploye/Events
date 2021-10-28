@@ -13,8 +13,8 @@ const Search = () => {
   const searchItems = (searchValue) => {
     setSearchInput(searchValue)
     if (searchInput !== '') {
-      const filteredData = events.filter((item) => {
-        return Object.values(item)
+      const filteredData = events.filter((event) => {
+        return Object.values(event)
           .join('')
           .toLowerCase()
           .includes(searchInput.toLowerCase())
@@ -38,8 +38,7 @@ const Search = () => {
             return (
               <div>
                 <div>
-                  <p>{event.performers.name}</p>
-                  <p>{event.type}</p>
+                  <p>{event.performers[0].name}</p>
                 </div>
               </div>
             )

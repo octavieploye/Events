@@ -1,23 +1,12 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import EventCard from './EventCard'
+import { fetchEvents } from '../helpers/Api'
 
 const EventList = () => {
   const [events, setEvents] = useState([])
 
   useEffect(() => {
-    async function fetchEvents() {
-      const config = {
-        method: 'get',
-        url: 'https://api.seatgeek.com/2/events?client_id=MjQxMDIzMzB8MTYzNTE4MTAzMS45MjkxODU0',
-        headers: {},
-      }
-
-      const response = await axios(config)
-
-      setEvents(response.data.events.slice(0, 4))
-    }
-    fetchEvents()
+    fetchEvents().then((res) => setEvents(res.slice(0, 4)))
   }, [])
 
   return (
