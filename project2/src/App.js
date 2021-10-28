@@ -1,7 +1,7 @@
-
 import './App.css'
 import EventList from './pages/EventList'
 import Nav from './components/Nav'
+import Filter from './pages/Filter'
 
 
 function App() {
@@ -27,6 +27,11 @@ function App() {
             <Route component={NotFound} /> */}
          
         </main>
+        <>
+          <EventList />
+          <Filter />
+        </>
+
       </header>
     </div>
    
