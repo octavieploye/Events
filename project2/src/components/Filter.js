@@ -14,20 +14,22 @@ const Filter = () => {
 
   function search(events) {
     return events.filter((event) => {
-      if (event.type === filterParam) {
+      if (event.type === filterParam && events.length > 0) {
         return searchParam.some((newEvent) => {
           return (
             event[newEvent].toString().toLowerCase().indexOf(q.toLowerCase()) >
             -1
           )
         })
-      } else if (filterParam === 'all') {
+      } else if (filterParam === 'all' && events.length > 0) {
         return searchParam.some((newEvent) => {
           return (
             event[newEvent].toString().toLowerCase().indexOf(q.toLowerCase()) >
             -1
           )
         })
+      } else {
+        return
       }
     })
   }
