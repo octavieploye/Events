@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom'
 
-const EventCard = ({ id, datetime_utc, title, performers, image }) => {
+const EventInfo = ({
+  id,
+  type,
+  datetime_utc,
+  url,
+  title,
+  venue,
+  performers,
+  image,
+}) => {
   let time = datetime_utc.slice(11)
   let date = datetime_utc.slice(0, 10)
   let fullDate = `${time} ${date}`
@@ -13,7 +22,15 @@ const EventCard = ({ id, datetime_utc, title, performers, image }) => {
           {performers.name} {title}
         </Link>
       </h2>
+      <p> {type} </p>
+      <p>
+        {' '}
+        {venue.name} {venue.extended_address}
+      </p>
+
       <p> {fullDate} </p>
+
+      <p> {venue.url} </p>
       <picture>
         <img src={performers[0].image} alt={performers.name} />
       </picture>
@@ -21,4 +38,4 @@ const EventCard = ({ id, datetime_utc, title, performers, image }) => {
   )
 }
 
-export default EventCard
+export default EventInfo
