@@ -28,6 +28,9 @@ const EventList = () => {
             <EventCard {...event} />
           </li>
         ))}
+
+      
+        
       </ul>
     </section>
   )
