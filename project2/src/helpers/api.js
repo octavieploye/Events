@@ -22,8 +22,10 @@ export const fetchEvent = async (id) => {
     headers: {},
   }
 
+
   console.log(`${baseUrl}/${id}${clientId}`)
   const response = await axios.get(`${baseUrl}/${id}${clientId}`)
   console.log(response)
+  const response = await axios(config)
   return response.data
 }
