@@ -42,28 +42,29 @@ const Filter = () => {
 			}
 		})
 	}
-
+	const buttonChange = (event) => {
+		setFilterParam(event.target.value)
+	}
 	return (
-		<div className='wrapper'>
-			<div className='search-wrapper'>
-				<div className='select'>
-					<select
-						onChange={(e) => {
-							setFilterParam(e.target.value)
-						}}
-						className='custom-select'
-						aria-label='Filter Events By Type'
-					>
-						<option value='theatre'>Theatre</option>
-						<option value='family'>Family</option>
-						<option value='concert'>Concert</option>
-						<option value='broadway_tickets_national'>Brodway</option>
-						<option value='mls'>MLS</option>
-						<option value='ncaa_basketball'>Basketball</option>
-					</select>
-					<span className='focus'></span>
-				</div>
-			</div>
+		<>
+			<button value='theatre' onClick={buttonChange}>
+				Theatre
+			</button>
+			<button value='family' onClick={buttonChange}>
+				Family
+			</button>
+			<button value='concert' onClick={buttonChange}>
+				Concert
+			</button>
+			<button value='broadway_tickets_national' onClick={buttonChange}>
+				Brodway
+			</button>
+			<button value='mls' onClick={buttonChange}>
+				MLS
+			</button>
+			<button value='ncaa_basketball' onClick={buttonChange}>
+				Basketball
+			</button>
 
 			<section>
 				<ul>
@@ -74,7 +75,7 @@ const Filter = () => {
 					))}
 				</ul>
 			</section>
-		</div>
+		</>
 	)
 }
 
