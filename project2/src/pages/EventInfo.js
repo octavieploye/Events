@@ -17,7 +17,7 @@ const EventInfo = ({
   return (
     <>
       <div>
-        <Link to="/events">Click here to see all events</Link>
+        <Link to="/">Click here to see all events</Link>
       </div>
       <div className="event">
         <h2>{performers[0].name}</h2>
