@@ -1,0 +1,12 @@
+.filterWarning {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.buttonWrap {
+  display: flex;
+  justify-content: center;
+}

@@ -7,17 +7,24 @@ const EventCard = ({ id, datetime_utc, title, performers, image, venue }) => {
 
   return (
     <div className="event">
-      <h2>
-        <Link to={`/events/${id}`}> {performers[0].name}</Link>
-      </h2>
-      <p> {fullDate} </p>
-      <p>
-        {' '}
-        {venue.city}, {venue.country}
-      </p>
-      <picture>
-        <img src={performers[0].image} alt={performers.name} />
-      </picture>
+      <div className="text">
+        <h2>
+          <Link className="link" to={`/events/${id}`}>
+            {' '}
+            {performers[0].name}
+          </Link>
+        </h2>
+        <p> {fullDate} </p>
+        <p>
+          {' '}
+          {venue.city}, {venue.country}
+        </p>
+      </div>
+      <div className="image">
+        <picture>
+          <img src={performers[0].image} alt={performers.name} />
+        </picture>
+      </div>
     </div>
   )
 }

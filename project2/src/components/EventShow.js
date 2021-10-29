@@ -14,8 +14,6 @@ function EventShow() {
     <div>
       {event ? (
         <div>
-          <h1>{event.type}</h1>
-          <p>this is working</p>
           <EventInfo {...event} />
         </div>
       ) : (

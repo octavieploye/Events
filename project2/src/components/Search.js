@@ -26,10 +26,10 @@ const Search = () => {
   }
 
   return (
-    <div>
+    <div className="searchBar">
       <input
         icon="search"
-        placeholder="Search..."
+        placeholder="Search Events..."
         onChange={(e) => searchItems(e.target.value)}
       />
       <>

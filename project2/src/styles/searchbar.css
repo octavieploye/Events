@@ -1,0 +1,11 @@
+.searchBar {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 10px;
+}
+
+input {
+  width: 400px;
+  border-radius: 10px;
+}

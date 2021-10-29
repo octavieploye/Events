@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import './App.css'
+// import './App.css'
 import EventShow from './components/EventShow'
 import Filter from './components/Filter'
 import Search from './components/Search'

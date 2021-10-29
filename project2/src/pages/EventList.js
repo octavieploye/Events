@@ -10,7 +10,7 @@ const EventList = () => {
   }, [])
 
   return (
-    <section>
+    <section className="listwrap">
       <ul>
         {events.map((event) => (
           <li key={event.id}>
